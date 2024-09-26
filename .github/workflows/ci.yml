@@ -42,7 +42,6 @@ jobs:
         with:
           context: .
           push: true
-          cache-form: type=gha
           tags: |
             ${{ env.IMAGE_LABEL }}:${{ steps.release.outputs.version }}
             ${{ env.IMAGE_LABEL }}:${{ steps.release.outputs.major }}
