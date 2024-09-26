@@ -4,7 +4,7 @@
   "runArgs": ["--init", "--privileged"],
   "postCreateCommand": "docker --version",
   "mounts": [
-    "source=${localEnv:HOME}/.ssh,target=/home/node/.ssh,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached",
     "source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind"
   ],
   "customizations": {
