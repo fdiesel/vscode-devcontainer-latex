@@ -1,0 +1,19 @@
+{
+  "name": "vscode-devcontainer-latex",
+  "dockerFile": "Dockerfile",
+  "runArgs": ["--init", "--privileged"],
+  "postCreateCommand": "docker --version",
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/node/.ssh,type=bind,consistency=cached",
+    "source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "github.vscode-github-actions",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}
